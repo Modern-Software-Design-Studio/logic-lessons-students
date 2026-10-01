@@ -40,7 +40,7 @@ State whether the biconditional is valid, satisfiable, or unsatisfiable.
 Using natural deduction, prove $r$ from the premises:
 
 $$
-\{p,\; p \implies q,\; q \implies r\}.
+\{p, p \implies q, q \implies r\}.
 $$
 
 Label every line with its justification.
@@ -50,13 +50,13 @@ Label every line with its justification.
 Using natural deduction, prove $r$ from the premises:
 
 $$
-\{p \vee q,\; p \implies r,\; q \implies r\}.
+\{p \vee q, p \implies r, q \implies r\}.
 $$
 
 Then, separately, prove $\neg p$ from:
 
 $$
-\{p \implies q,\; p \implies \neg q\}.
+\{p \implies q, p \implies \neg q\}.
 $$
 
 Identify the inference rule used for each conclusion.
