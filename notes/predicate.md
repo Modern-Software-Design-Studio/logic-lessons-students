@@ -1,3 +1,14 @@
+---
+title: '50.057 Predicate Logic'
+author:
+- ISTD, SUTD
+header-includes:
+  - \usepackage{newunicodechar}
+  - \newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
+  - \newunicodechar{∀}{\ensuremath{\forall}}
+---
+
+
 # 50.057 Predicate Logic
 
 ## Learning Outcomes
@@ -412,6 +423,7 @@ The second premise means "for a person to follow a followee, that followee must 
 
 We establiash the proof as follows
 
+$$
 \begin{equation*}
 \begin{array}{|r|l|l|}
 \hline
@@ -423,6 +435,7 @@ We establiash the proof as follows
 6. &	follows(ada,cara)	& \implies {\tt Elim}: 5,3 \\ \hline
 \end{array}
 \end{equation*}
+$$
 
 At step 3, we substitute the universal quantified variable $y$ by $cara$.
 At step 4, we substitute the universal quantified variable $x$ by $ada$.
@@ -470,6 +483,7 @@ $$
 \forall x.\forall y.follows(x,y)
 $$
 
+$$
 \begin{equation*}
 \begin{array}{|r|l|l|}
 \hline
@@ -484,6 +498,7 @@ $$
 8. &	\forall x.\forall y.follows(x,y)	                                & \forall {\tt  Intro}: 7  \\ \hline
 \end{array}
 \end{equation*}
+$$
 
 At step 3, we eliminate the $\forall$ quantified variable by introducing a *placeholder* object $d$. $d$ is a reserved (yet universally quantified) object to denote the follower of the $follows(\_,\_)$ predicate.  However it does not refer to a specific object (person). 
 At step 4, we apply the same trick to eliminate $x$ with a placeholder object $c$.
@@ -559,6 +574,7 @@ $$
 
 Using a fresh witness $a$, the sub-proof is:
 
+$$
 \begin{equation*}
 \begin{array}{|r|c|l|}
 \hline
@@ -570,6 +586,8 @@ Using a fresh witness $a$, the sub-proof is:
 3. & connected(cara) & \exists\ {\tt Elim}: 3.1 - 3.3 \\ \hline
 \end{array}
 \end{equation*}
+$$
+
 
 At step 3.1, we find a placeholder object $a$ which is not mentioned in any active assumption, it is also no in the conclusion $connected(cara)$. 
 At step 3.2, we apply ($\forall$Elim) to the step 2.
@@ -778,7 +796,7 @@ The antecedent of the inductive case is called the *inductive hypothesis*, and t
 
 Let's apply the above inference rule to the sentence that being considered. 
 
-
+$$
 \begin{equation*}
 \begin{array}{c}
 even(zero) \implies even(suc(suc(zero))) \wedge 
@@ -798,6 +816,7 @@ odd(suc(zero)) \implies odd(suc(suc(suc(zero)))) \\
 \forall x. ( (even(x)  \implies  even(suc(suc(x)))) \wedge (odd(x)  \implies  odd(suc(suc(x)))) )
 \end{array}
 \end{equation*}
+$$
 
 ##### Base Case: zero 
 
@@ -951,6 +970,7 @@ $$
 * **Base case.** $P(r) = loves(father(r), mother(r))$ holds by the Base axiom.
 * **Inductive case.** Fix an arbitrary $p$ and assume $P(p)$; both branches then follow from the axioms:
 
+```math
 \begin{equation*}
 \begin{array}{|r|c|l|}
 \hline
@@ -963,6 +983,7 @@ $$
 7.  & loves(father(mother(p)), mother(mother(p))) & \implies \text{Elim}: 6, 1 \\ \hline
 \end{array}
 \end{equation*}
+```
 
 Step 4 is $P(father(p))$, discharging the paternal branch; step 7 is $P(mother(p))$, discharging the maternal branch. Both are derived from the single hypothesis $P(p)$.
 
