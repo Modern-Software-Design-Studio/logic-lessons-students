@@ -480,6 +480,26 @@ In the above proof, steps 4.1 - 4.3  is a sub proof $p \vdash r$ (i.e. $p$ entai
 
 One may argue that the above proof can be established without  sub-proof as we already have $r$ in 4.3. The above example is to show that the possibility of using the $(\implies{\tt Intro})$, not the necessity. In many situations sub-proof is useful, i.e., we might need to reuse the fact that $p \implies r$ multiple times to prove something else.
 
+#### What is Reiterate?
+
+It is actually an assumption! Suppose we consider proving the same example by reshuffling the order of usage of the premises
+
+
+$$
+\begin{array}{|l|c|l|}
+\hline
+2. & p \implies q  & {\tt Premise} \\ \hline
+3. & q \implies r & {\tt Premise} \\ \hline
+4.1. & p & {\tt Assume} \\ \hline
+4.2. & q & \implies{\tt Elim}: 2, 4.1 \\ \hline
+4.3. & r & \implies{\tt Elim}: 3, 4.2 \\ \hline
+4. & p \implies r & \implies{\tt Intro}: 4.1 - 4.3 \\ \hline
+1. & p & {\tt Premise} \\ \hline
+5. & r & \implies{\tt Elim}: 1, 4 \\ \hline
+\end{array}
+$$
+
+In the above, we don't call step 4.1, an re-iterate, because step 1 comes after 4.1. In this case 4.1 is just an assumption. 
 
 ### Soundness 
 
