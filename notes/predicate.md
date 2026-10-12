@@ -152,6 +152,8 @@ On the other hand, $good(x)$ is not a ground sentence.
 
 The semantics for this subset is the same as the one for propositional logic, i.e. we can evaluate a non-quantified ground sentence based a particular truth-assignment. For instance if $knows(ada, cara)$ is 1 and $knows(cara, daphne)$ is 0, then evaluating $knows(ada, cara) \vee knows(cara, daphne)$ returns 1.
 
+> Note: Recall in propositional logic, a truth assignment maps atom sentences to 0 or 1 thus we can evaluate compound sentences to either 0 or 1. In preidcate logic, a truth assignment maps grounded non-compound relational predicates to 0 or 1 thus we can evaluate compound sentences to eitehr 0 or 1.
+
 #### Quantified ground sentences
 
 To understand the semantic of the quantified ground sentences, we need an additional definition.
