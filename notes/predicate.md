@@ -16,8 +16,6 @@ header-includes:
 1. List the difference between predicate logic and propositional logic
 1. List the syntax elements of predicate logic
 1. Apply deduction proof in simple predicate logic
-1. List the difference between simple predicate logic and first order logic
-1. Apply linear induction proof in first order logic
 
 ## Predicate Logic
 
