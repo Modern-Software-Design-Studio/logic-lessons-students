@@ -583,7 +583,7 @@ $$
 3.1. & knows(a,cara) & a\ {\tt is\ not\ used\ in\ any\ active\ assumption\ or\ in\ }connected(cara) \\ \hline
 3.2. & knows(a,cara) \implies connected(cara) & \forall{\tt Elim}\ 2 \\ \hline
 3.3. & connected(cara) & \implies{\tt Elim}\ 3.1, 3.2 \\ \hline
-3. & connected(cara) & \exists\ {\tt Elim}: 3.1 - 3.3 \\ \hline
+3. & connected(cara) & \exists\ {\tt Elim}: 1, 3.1 - 3.3 \\ \hline
 \end{array}
 \end{equation*}
 $$
