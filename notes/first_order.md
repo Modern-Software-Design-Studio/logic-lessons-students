@@ -499,7 +499,7 @@ Concretely we can define $P(t)$ as follows
 * Base case numeral axiom
 
 $$
-        num(zoro) 
+        num(zero) 
 $$
 
 * Recursive case numeral axioms
@@ -531,6 +531,8 @@ Assume the induction hypothesis $P(x)$. Then there is a numeral $n$ such that $e
 By equality replacement, $eq(suc(x),suc(n))$. Since $suc(n)$ is a numeral, $P(suc(x))$ follows.
 
 The induction hypothesis is about an arbitrary term $x$; we do not need to inspect the internal shape of $x$ again.
+
+> We can think of equality replacement as a lemma, can you define this lemma and prove it?
 
 ## Normalisation: Addition Case
 
