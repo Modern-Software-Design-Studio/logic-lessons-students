@@ -187,7 +187,7 @@ There are at least two major directions of application Curry-Howard Corresponden
 1. Exploit the correspondence to "harden" the development process to make it to be correct in the first attempt. For instance, we can exploit advanced typing mechanism in the main language such as Rust, TypeScript and etc to "incribe" the correct intention in type annotation (since types are logic proposition). If the implemention (i.e. the code) is typechecked by the compiler, the correctness w.r.t to the intent (in the type annotation) is entailed logically. In the age of LLMs, this means that we should write specification on the level of type (propositional predicates), and let the agent generate the codes (the proof).
 
 
-For the rest of this course, we will first study the 2nd application as type-driven development. In a few weeks, we will look into formal verification.
+For the rest of this section, we will first study the 2nd application as type-driven development. In a few weeks, we will look into formal verification.
 
 
 #### Theorical and Philosophical Application of Curry-Howard Correpondence
@@ -247,7 +247,7 @@ in the last section. Hence besides $zero$ term and $suc(\_)$ function, we introd
 - $nil$ - the empty list term
 - $cons(\_, \_)$ - the non-empty list constructor function. 
 
-The `list` predicate can be defined recursively as follows
+The `list` predicate can be defined recursively as the following axioms
 
 $$
 list(nil) 
@@ -291,7 +291,7 @@ $$
 $$
 
 #### A glimpse into the future : Agda
-In a language that supports dependent type fully, such as Agda, we would implement it as follows by following Curry-Howard Coorespondence 
+In a language that supports dependent type fully, such as Agda and Lean, we would implement it as follows by following Curry-Howard Coorespondence 
 
 ```agda
 data SList ( A : Set ) : ℕ → Set  where
