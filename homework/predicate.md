@@ -12,15 +12,15 @@ result is never negative.
 Use the following axioms:
 
 $$
-\forall y.\,eq(monus(zero,y),zero)
+\forall y. eq(monus(zero,y),zero)
 $$
 
 $$
-\forall x.\,eq(monus(suc(x),zero),suc(x))
+\forall x. eq(monus(suc(x),zero),suc(x))
 $$
 
 $$
-\forall x.\forall y.\,
+\forall x.\forall y. 
 eq(monus(suc(x),suc(y)),monus(x,y)).
 $$
 
@@ -42,7 +42,7 @@ Show every intermediate equality and identify the axiom used at each step.
 Prove by linear induction that
 
 $$
-\forall x.\,eq(monus(x,zero),x).
+\forall x. eq(monus(x,zero),x).
 $$
 
 Your proof should include:
@@ -55,14 +55,14 @@ Your proof should include:
 Prove by linear induction on $y$ that
 
 $$
-\forall x.\forall y.\,eq(monus(suc(x),suc(y)),monus(x,y)).
+\forall x.\forall y. eq(monus(suc(x),suc(y)),monus(x,y)).
 $$
 
 Explain why the displayed statement is already an axiom, and instead prove the
 following non-trivial consequence:
 
 $$
-\forall x.\,eq(monus(x,suc(x)),zero).
+\forall x. eq(monus(x,suc(x)),zero).
 $$
 
 You may use Exercise 2 and the Monus axioms.
@@ -78,13 +78,13 @@ $$
 Prove by multidimensional induction that
 
 $$
-\forall x.\,leq(x,x).
+\forall x. leq(x,x).
 $$
 
 Then prove the stronger statement
 
 $$
-\forall x.\forall y.\,
+\forall x.\forall y. 
 \big(eq(monus(x,y),zero) \vee eq(monus(y,x),zero)\big)
 $$
 
@@ -96,17 +96,17 @@ cases.
 Assume the addition axioms from the notes:
 
 $$
-\forall x.\,eq(x,add(zero,x))
+\forall x. eq(x,add(zero,x))
 $$
 
 $$
-\forall x.\forall y.\,eq(add(suc(x),y),add(x,suc(y))).
+\forall x.\forall y. eq(add(suc(x),y),add(x,suc(y))).
 $$
 
 Prove by induction on $y$ that
 
 $$
-\forall x.\,eq(monus(add(x,y),y),x).
+\forall x. eq(monus(add(x,y),y),x).
 $$
 
 In the inductive case, use the AddSuc and Monus successor axioms to expose the
@@ -125,7 +125,7 @@ Define $num(t)$ to mean that $t$ is a Peano numeral. Prove by structural
 induction that every closed term can be reduced to a numeral:
 
 $$
-\forall t.\,\exists n.\,(num(n) \wedge eq(t,n)).
+\forall t. \exists n. (num(n) \wedge eq(t,n)).
 $$
 
 Your proof must include a separate $monus$ case. State and prove the auxiliary
@@ -136,7 +136,7 @@ lemma that the monus of two numerals is a numeral.
 Prove the identity
 
 $$
-\forall x.\forall y.\,
+\forall x.\forall y. 
 eq(monus(add(x,y),x),y).
 $$
 
