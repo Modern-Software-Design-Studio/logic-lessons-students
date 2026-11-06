@@ -25,7 +25,21 @@ eq(monus(suc(x),suc(y)),monus(x,y)).
 $$
 
 You may use symmetry and transitivity of equality, as well as equality
-replacement inside a larger term.
+replacement inside a larger term, namely
+
+$$
+\forall x. \forall y. eq(x, y) \implies eq(y, x)
+$$
+
+$$
+\forall x. \forall y. \forall z. eq(x, y) \wedge eq(y, z) \implies eq(x,z)
+$$
+
+$$
+\forall x. \forall y. eq(x, y) \wedge \psi[x] \implies \psi[y]
+$$
+
+$\psi[x]$ denotes that $x$ is a sub-term in $\psi$.
 
 ## Exercise 1: Monus by Deduction
 
